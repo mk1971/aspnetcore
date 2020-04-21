@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = null;
+}
+<h4>View Principal</h4>
+
+<!--comentário de HTML -->
+@* valor é igual a 100 *@
+<p>valor: @ViewData["valor"]</p>
+
+@* passar o valor para 200 *@
+@{ ViewData["valor"] = 200; }
+<p>valor: @ViewData["valor"]</p>
+
+@* carregar o partial view *@
+@Html.Partial("_parte1")
+
+@* regressa a view principal*@
+<p>valor: @ViewData["valor"]</p>
