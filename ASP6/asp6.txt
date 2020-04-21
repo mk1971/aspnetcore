@@ -1,0 +1,1 @@
+Acesso a mais do que um ViewModel da mesma View
