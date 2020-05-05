@@ -1,0 +1,20 @@
+﻿@model Asp22.Models.Cliente
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>novo_Cliente</title>
+</head>
+<body>
+    <form asp-controller="Home" asp-action="novo_Cliente" method="post">
+        Nome: <input asp-for="Nome" /><br />
+        Telefone: <input asp-for="Telefone" /><br />
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
