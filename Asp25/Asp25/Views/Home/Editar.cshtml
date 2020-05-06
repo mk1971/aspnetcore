@@ -1,0 +1,23 @@
+﻿@model  Asp25.Models.Cliente
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <form asp-controller="Home" asp-action="Editar">
+        @Html.HiddenFor(model => model.id)
+        <div>
+            @Html.TextBoxFor(model => model.Nome)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Telefone)
+        </div>
+        <button>Editar</button>
+    </form>
+
+    <a asp-controller="Home" asp-action="index">Cancelar</a>
+</body>
+</html>
