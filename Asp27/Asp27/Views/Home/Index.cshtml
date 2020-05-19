@@ -1,0 +1,39 @@
+﻿
+@{
+    string nome = "João";
+    string apelido = "Ribeiro";
+    List<string> lista = new List<string>();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>@nome</p>
+    <a href="mailto:joao.ribeiro@gmail.com">joao.ribeiro@gmail.com</a>
+    <p>O valor da variavel @@nome é @nome </p>
+    <p>O meu nome completo é: @nome @apelido </p>
+    <p>@(10+20)</p>
+    <p>@DateTime.Now.Year</p>
+    <p>@DateTime.Now.Minute</p>
+
+    @{ 
+        string valor = "Um número qualquer";
+    }
+    <p>@valor</p>
+
+    @{ 
+        valor = "Outra frase";
+    }
+    <p>@valor</p>
+
+    @{ 
+        nome = "Ana";
+        <p>Dentro do Razor eu posso apresentar o nome @nome</p>
+    }
+</body>
+</html>
