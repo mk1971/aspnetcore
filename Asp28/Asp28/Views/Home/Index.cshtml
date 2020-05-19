@@ -1,0 +1,27 @@
+﻿@using Asp28.Classes
+@{
+    Asp28.Classes.Pessoa eu = new Asp28.Classes.Pessoa()
+    {
+        Nome = "João",
+        Apelido = "Ribeiro"
+    };
+
+    List<Asp28.Classes.Pessoa> lista_Pessoas = new List<Asp28.Classes.Pessoa>();
+    lista_Pessoas.Add(new Pessoa() { Nome = "Ana", Apelido = "Silva"});
+    lista_Pessoas.Add(new Pessoa() { Nome = "Antônio", Apelido = "Oliveira" });
+    lista_Pessoas.Add(new Pessoa() { Nome = "Carla", Apelido = "Santos" });
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @foreach (var pessoa in lista_Pessoas)
+    {
+        <p>O meu nome é @pessoa.Nome @pessoa.Apelido</p>
+    }
+</body>
+</html>
