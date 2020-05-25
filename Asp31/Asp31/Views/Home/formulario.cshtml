@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>formulario</title>
+</head>
+<body>
+    <form asp-action="processar" asp-controller="Outro" method="post">
+        <input type="text" name="texto" value="" />
+        <button>Enviar</button>
+    </form>
+
+    <form method="post">
+        <input type="text" name="texto" value="" />
+        <button asp-action="processar2">Enviar</button>
+    </form>
+
+    <form asp-route="teste" method="post">
+        <input type="text" name="texto" value="" />
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
