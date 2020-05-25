@@ -1,0 +1,23 @@
+﻿@model AspNetCore_Select.Models.Estado
+
+<h1>Usando tag Helper Select</h1>
+<hr />
+
+<h3>Apenas definindo select asp-for</h3>
+<select asp-for="EstadoSigla"></select>
+<br />
+
+<h3>Estados definidos usando 'option value'</h3>
+<select asp-for="EstadoSigla">
+    <option value="MG">Minas Gerais</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="PR">Paraná</option>
+    <option selected="selected" value="SP">São Paulo</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="--">Outros Estados</option>
+</select>
+<br />
+
+<h3>Obtendo a lista de uma fonte de dados usando asp-items</h3>
+<select asp-for="EstadoSigla" asp-items="@ViewBag.Estados"></select>
+
